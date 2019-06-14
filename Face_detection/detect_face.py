@@ -10,9 +10,9 @@ import os
 image = cv2.imread("unioke.jpg")
 #Code for the ArgumentParser
 ap = argparse.ArgumentParser()
-ap.add_argument("-f", "--face", required = True, 
+ap.add_argument("-f", "--face", 
 help = "path to where the face cascade resides") 
-ap.add_argument("-i", "--image", required = True, 
+ap.add_argument("-i", "--image",  
 help = "path to where the image file resides") 
 args = vars(ap.parse_args())
 image = cv2.imread(args["image"]) 
