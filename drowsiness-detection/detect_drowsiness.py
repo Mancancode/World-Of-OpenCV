@@ -9,6 +9,7 @@ from imutils import face_utils
 from threading import Thread
 import numpy as np
 import playsound
+import pygame
 import argparse
 import imutils
 import time
@@ -17,7 +18,11 @@ import cv2
 
 def sound_alarm(path):
 	# play an alarm sound
-	playsound.playsound(path)
+	pygame.mixer.init()
+	pygame.mixer.music.load('alarm.wav')
+	time.sleep(2)
+	pygame.mixer.music.play()
+	pygame.mixer.music.stop()
 
 def eye_aspect_ratio(eye):
 	# compute the euclidean distances between the two sets of
@@ -39,7 +44,7 @@ def eye_aspect_ratio(eye):
 ap = argparse.ArgumentParser()
 ap.add_argument("-p", "--shape-predictor", required=True,
 	help="path to facial landmark predictor")
-ap.add_argument("-a", "--alarm", type=str, default="",
+ap.add_argument("-a", "--alarm", type=str, default='C:\Users\muna\Desktop\OpenCV\World-Of-OpenCV\drowsiness-detection\alam.wav',
 	help="path alarm .WAV file")
 ap.add_argument("-w", "--webcam", type=int, default=0,
 	help="index of webcam on system")
