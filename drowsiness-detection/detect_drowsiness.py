@@ -7,8 +7,8 @@ from scipy.spatial import distance as dist
 from imutils.video import VideoStream
 from imutils import face_utils
 from threading import Thread
+from playsound import playsound
 import numpy as np
-import playsound
 import pygame
 import argparse
 import imutils
@@ -16,13 +16,16 @@ import time
 import dlib
 import cv2
 
+
+
 def sound_alarm(path):
-	# play an alarm sound
-	pygame.mixer.init()
+	pygame.mixer.inint()
 	pygame.mixer.music.load('alarm.wav')
-	time.sleep(2)
 	pygame.mixer.music.play()
+	time.sleep(2)
 	pygame.mixer.music.stop()
+	# play an alarm sound
+	#playsound.playsound('alam.wav')
 
 def eye_aspect_ratio(eye):
 	# compute the euclidean distances between the two sets of
@@ -44,7 +47,7 @@ def eye_aspect_ratio(eye):
 ap = argparse.ArgumentParser()
 ap.add_argument("-p", "--shape-predictor", required=True,
 	help="path to facial landmark predictor")
-ap.add_argument("-a", "--alarm", type=str, default='C:\Users\muna\Desktop\OpenCV\World-Of-OpenCV\drowsiness-detection\alam.wav',
+ap.add_argument("-a", "--alarm", type=str, default="",
 	help="path alarm .WAV file")
 ap.add_argument("-w", "--webcam", type=int, default=0,
 	help="index of webcam on system")
@@ -54,7 +57,7 @@ args = vars(ap.parse_args())
 # blink and then a second constant for the number of consecutive
 # frames the eye must be below the threshold for to set off the
 # alarm
-EYE_AR_THRESH = 0.3
+EYE_AR_THRESH = 0.19
 EYE_AR_CONSEC_FRAMES = 48
 
 # initialize the frame counter as well as a boolean used to
@@ -123,6 +126,7 @@ while True:
 			# if the eyes were closed for a sufficient number of
 			# then sound the alarm
 			if COUNTER >= EYE_AR_CONSEC_FRAMES:
+				print('i fucking got here')
 				# if the alarm is not on, turn it on
 				if not ALARM_ON:
 					ALARM_ON = True
@@ -132,7 +136,7 @@ while True:
 					# and if so, start a thread to have the alarm
 					# sound played in the background
 					if args["alarm"] != "":
-						t = Thread(target=sound_alarm,
+						t = Thread(target=playsound,
 							args=(args["alarm"],))
 						t.deamon = True
 						t.start()
