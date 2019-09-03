@@ -1,4 +1,4 @@
-# USAGE
+#_*_coding:UTF-8_*_
 # python detect_drowsiness.py --shape-predictor shape_predictor_68_face_landmarks.dat
 # python detect_drowsiness.py --shape-predictor shape_predictor_68_face_landmarks.dat --alarm alarm.wav
 
@@ -25,7 +25,7 @@ def sound_alarm(path):
 	time.sleep(2)
 	pygame.mixer.music.stop()
 	# play an alarm sound
-	#playsound.playsound('alam.wav')
+
 
 def eye_aspect_ratio(eye):
 	# compute the euclidean distances between the two sets of
