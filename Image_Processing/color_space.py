@@ -1,5 +1,5 @@
 #Exploring looking at individual colors
-#import needed libraries
+#import all needed libraries
 
 import numpy as np
 import sys
@@ -15,7 +15,7 @@ print B.shape
 cv2.imshow("red", R)
 cv2.imshow("green", G)
 cv2.imshow("blue", B)
-cv2.waitKey(0)
+cv2.waitKey(0) #waitandkill
 
 
 #Now Merge all to get the original images
