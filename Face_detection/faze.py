@@ -6,6 +6,8 @@ imagePath = sys.args[1]
 cascPath = sys.args[2]
 
 #Creat the haar cascading
+#Creat the haar cascading
+#Creat the haar cascading
 faceCascade = cv2.CreatascadeClifier(cascPath)
 image = cv2.mimread(imagePath)
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
