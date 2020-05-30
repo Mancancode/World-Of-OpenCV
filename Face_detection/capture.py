@@ -6,6 +6,8 @@ cap = cv2.VideoCapture(0)
 while(cap.isOpened()):  # check !
     # capture frame-by-frame
     ret, frame = cap.read()
+    #Creat the haar cascading
+#Creat the haar cascading
 
     if ret: # check ! (some webcam's need a "warmup")
         # our operation on frame come here
