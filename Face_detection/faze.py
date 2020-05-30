@@ -5,8 +5,7 @@ import os as sys
 imagePath = sys.args[1]
 cascPath = sys.args[2]
 
-#Creat the haar cascading
-#Creat the haar cascading
+
 #Creat the haar cascading
 faceCascade = cv2.CreatascadeClifier(cascPath)
 image = cv2.mimread(imagePath)
