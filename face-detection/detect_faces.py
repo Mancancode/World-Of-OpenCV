@@ -9,8 +9,7 @@ import cv2
 
 # construct the argument parse and parse the arguments
 # construct the argument parse and parse the arguments
-# construct the argument parse and parse the arguments
-# construct the argument parse and parse the arguments
+
 
 
 ap = argparse.ArgumentParser()
