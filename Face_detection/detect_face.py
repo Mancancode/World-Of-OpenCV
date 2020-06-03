@@ -9,6 +9,8 @@ import pickle
 import cv2
 import os
 
+#Import the Necessary packages
+#Import the Necessary packages
 
 
 image = cv2.imread("unioke.jpg")
