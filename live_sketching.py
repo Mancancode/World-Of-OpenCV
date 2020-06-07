@@ -1,10 +1,13 @@
 #import needed libraries
+#import needed libraries
+#import needed libraries
 import numpy as np
 import sys
 import imutils
 import argparse
 import cv2
 
+#create our sketching function
 #create our sketching function
 def sketch(image):
     #convert image to grayscale
@@ -17,6 +20,7 @@ def sketch(image):
     canny_egde  =   cv2.Canny(img_gray_bur,30,65)
 
     #Do an invert to binarize the image
+    #Do an invert to binarize
     ret,mask    =   cv2.threshold(canny_egde,60,255,cv2.THRESH_BINARY_INV)
     return mask
       #capture the webcam
