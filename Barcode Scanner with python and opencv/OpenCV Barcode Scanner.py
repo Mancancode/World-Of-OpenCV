@@ -1,7 +1,5 @@
 # import the necessary packages
-# import the necessary packages
-# import the necessary packages
-# import the necessary packages
+
 from imutils.video import VideoStream
 from pyzbar import pyzbar
 import argparse
