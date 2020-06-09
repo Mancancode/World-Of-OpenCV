@@ -1,4 +1,7 @@
 # import the necessary packages
+# import the necessary packages
+# import the necessary packages
+# import the necessary packages
 from imutils.video import VideoStream
 from pyzbar import pyzbar
 import argparse
@@ -9,6 +12,8 @@ import cv2
  
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
+# construct the argument parser and parse the arguments
+# construct the argument parser and parse the arguments
 ap.add_argument("-o", "--output", type=str, default="barcodes.csv",
 	help="path to output CSV file containing barcodes")
 args = vars(ap.parse_args())
@@ -31,6 +36,8 @@ while True:
 	frame = vs.read()
 	frame = imutils.resize(frame, width=400)
  
+	# find the barcodes in the frame and decode each of the barcodes
+	# find the barcodes in the frame and decode each of the barcodes
 	# find the barcodes in the frame and decode each of the barcodes
 	barcodes = pyzbar.decode(frame)
 
