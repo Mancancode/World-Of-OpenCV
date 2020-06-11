@@ -1,11 +1,14 @@
 # import the necessary packages
+# import the necessary packages
 from imutils.perspective import four_point_transform
 from imutils import contours
 import imutils
 import cv2
+
  
 # define the dictionary of digit segments so we can identify
 # each digit on the thermostat
+
 DIGITS_LOOKUP = {
 	(1, 1, 1, 0, 1, 1, 1): 0,
 	(0, 0, 1, 0, 0, 1, 0): 1,
