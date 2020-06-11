@@ -1,5 +1,7 @@
 
 # import the necessary packages
+# import the necessary packages
+
 from imutils import face_utils
 import numpy as np
 import argparse
@@ -39,7 +41,9 @@ for (i, rect) in enumerate(rects):
 	# convert dlib's rectangle to a OpenCV-style bounding box
 	# [i.e., (x, y, w, h)], then draw the face bounding box
 	(x, y, w, h) = face_utils.rect_to_bb(rect)
-	cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
+	cv2.rectangle(image, (x, y), ( x + w, y + h), (0, 255, 0), 2)
+	
+	
 
 	# show the face number
 	cv2.putText(image, "Face #{}".format(i + 1), (x - 10, y - 10),
