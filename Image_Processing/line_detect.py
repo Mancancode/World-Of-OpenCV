@@ -1,5 +1,4 @@
-# line_detect.py
-# line_detect.py
+
 # line_detect.py
 import numpy as np
 import imutils
@@ -7,6 +6,10 @@ from matplotlib import pyplot as plt
 import cv2
 
 #C odes for houghlines detection 
+#C odes for houghlines detection 
+
+#C odes for houghlines detection 
+
 
 #load our second image
 image  =   cv2.imread("image/tet.png")
